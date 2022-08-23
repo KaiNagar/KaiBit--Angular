@@ -1,0 +1,13 @@
+.moves-list {
+  background-color: rgb(93, 170, 184);
+  padding: 1rem;
+  border-radius: 4px;
+  max-height: 360px;
+  overflow: auto;
+  h1 {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid grey;
+  }
+}

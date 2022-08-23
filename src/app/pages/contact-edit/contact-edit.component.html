@@ -1,0 +1,48 @@
+<section class="contact-edit">
+  <div class="actions flex space-between align-center">
+    <button class="back" (click)="onBack()">Back</button>
+    <h2>{{ contact._id ? "Edit" : "Add" }}</h2>
+    <div class="spacer"></div>
+  </div>
+  <div class="c-details flex align-center">
+    <img
+      src="https://robohash.org/{{
+        contact.name ? contact.name : 'Kai Nagar'
+      }}?set=set3"
+      alt=""
+    />
+    <form (ngSubmit)="onSaveContact()" class="contact-info flex column">
+      <div class="tab">
+        <label class="name" for="name">Name: </label>
+        <input
+          required
+          [(ngModel)]="contact.name"
+          type="text"
+          name="name"
+          id="name"
+        />
+      </div>
+      <div class="tab">
+        <label class="phone" for="phone">Phone: </label>
+        <input
+          required
+          [(ngModel)]="contact.phone"
+          type="text"
+          name="phone"
+          id="phone"
+        />
+      </div>
+      <div class="tab">
+        <label class="email" for="email">Email: </label>
+        <input
+          required
+          [(ngModel)]="contact.email"
+          type="email"
+          name="email"
+          id="email"
+        />
+      </div>
+      <button class="save">{{ contact._id ? "Save" : "Add" }}</button>
+    </form>
+  </div>
+</section>

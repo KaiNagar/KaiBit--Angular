@@ -1,0 +1,42 @@
+.transfer-fund {
+  background-color: rgb(93, 170, 184);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-block: 1rem;
+  @mixin btn {
+    text-align: center;
+    background-color: rgb(26, 48, 109);
+    border: 0;
+    border-radius: 8px;
+    padding: 5.5px 12px;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      background-color: rgb(74, 84, 112);
+      color: rgb(93, 170, 184);
+    }
+  }
+  h1 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .alert {
+    color: rgb(209, 41, 41);
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .transfer-form {
+    label {
+      margin: 0.5rem;
+    }
+    input {
+      flex-grow: 1;
+    }
+    button {
+      @include btn;
+      margin: 0.5rem;
+    }
+  }
+}

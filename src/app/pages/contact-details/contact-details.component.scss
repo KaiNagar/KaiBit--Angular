@@ -1,0 +1,55 @@
+.contact-details {
+  @mixin btn {
+    text-align: center;
+    background-color: rgb(26, 48, 109);
+    border: 0;
+    border-radius: 8px;
+    padding: 5.5px 12px;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform:uppercase ;
+    &:hover {
+      background-color: rgb(74, 84, 112);
+      color: rgb(93, 170, 184);
+    }
+  }
+  color: white;
+  @media only screen and (max-width: 600px) {
+    .c-details {
+      flex-direction: column;
+    }
+  }
+  img {
+    width: 250px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 20px 2px #000;
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+  span {
+    color: white;
+    padding: 0.5rem;
+  }
+  .name,
+  .phone,
+  .email {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  button {
+    @include btn;
+  }
+
+  .actions {
+    a {
+      @include btn;
+    }
+    .actions-right{
+      a{
+        margin-inline-end: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.app-header {
+  background-color: hsl(218, 28%, 13%);
+  color: white;
+  nav{
+    a:not(:last-child){
+        margin-inline-end: 1rem;
+    }
+    a:hover{
+        color: rgb(93, 170, 184);
+        text-decoration: none;
+    }
+  }
+}

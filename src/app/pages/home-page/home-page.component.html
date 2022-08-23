@@ -1,0 +1,37 @@
+<section class="home-page flex align-center">
+  <div
+    *ngIf="!user; else UserDetails"
+    class="home-welcome flex column align-center justify-center"
+  >
+    <img
+      class="logo"
+      src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/368/7693601368_4c33313f-8cd4-4cbe-8e26-034beaeadcae.png?cb=1660560699"
+      alt=""
+    />
+    <h4>Control Your Finances</h4>
+
+    <button (click)="onGoSignup()" class="signup-btn">Sign up</button>
+  </div>
+
+  <ng-template #UserDetails>
+    <div class="user-details flex column">
+      <div class="u-top flex column">
+        <div class="flex align-center">
+          <img
+            class="img"
+            src="https://robohash.org/{{ user.name }}?set=set3"
+            alt=""
+          />
+          <div class="user-info flex column">
+            <span><span class="name">Name: </span>{{ user.name }}</span>
+            <span><span class="coins">Coins: </span>{{ user.coins }}</span>
+            <span><span class="btc">BTC: </span>btc</span>
+          </div>
+        </div>
+        <button class="logout" (click)="onLogout()">Logout</button>
+      </div>
+
+      <moves-list></moves-list>
+    </div>
+  </ng-template>
+</section>

@@ -1,0 +1,8 @@
+<a
+  [routerLink]="['/contact', contact._id]"
+  (click)="onSelected.emit(contact._id)"
+  class="contact-preview flex align-center"
+>
+  <img src="https://robohash.org/{{ contact.name }}?set=set3" alt="" />
+  <p class="name">{{ contact.name }}</p>
+</a>

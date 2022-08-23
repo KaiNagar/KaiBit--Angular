@@ -1,0 +1,8 @@
+<section class="contact-app">
+  <div class="filter-tab flex align-center space-between">
+    <contact-filter class="filter"></contact-filter>
+    <a routerLink="/edit">Add</a>
+  </div>
+
+  <contact-list [contacts]="contacts$ | async"></contact-list>
+</section>

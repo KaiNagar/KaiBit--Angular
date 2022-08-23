@@ -1,0 +1,11 @@
+<section class="signup-page container margin flex column align-center">
+  <img src="https://cdn-icons-png.flaticon.com/512/7617/7617086.png" alt="" />
+  <form
+    class="signup-form flex column justify-center align-center"
+    (submit)="onSignup()"
+  >
+    <label for="newUserName">Please enter your name: </label>
+    <input [(ngModel)]="newUserName" required type="text" name="newUserName" placeholder="Name" />
+    <button>Sign Up</button>
+  </form>
+</section>

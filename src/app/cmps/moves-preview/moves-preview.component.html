@@ -1,0 +1,10 @@
+<section class="move-preview flex column">
+  <span *ngIf="user">
+    <span class="txt">To: </span>{{ move.to }}
+  </span>
+  <span
+    ><span class="txt">At: </span>
+    {{ move.at | date:"dd/MM/YY, h:mm:ss a" }}</span
+  >
+  <span><span class="txt">Amount: </span>{{move.amount}}</span>
+</section>

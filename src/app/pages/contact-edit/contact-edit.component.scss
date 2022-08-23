@@ -1,0 +1,70 @@
+.contact-edit {
+  @mixin btn {
+    text-align: center;
+    background-color: rgb(26, 48, 109);
+    border: 0;
+    border-radius: 8px;
+    padding: 5.5px 12px;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      background-color: rgb(74, 84, 112);
+      color: rgb(93, 170, 184);
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .c-details {
+      flex-direction: column;
+    }
+  }
+  h2 {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  img {
+    width: 250px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 20px 2px #000;
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+  .tab {
+    padding: 0.5rem;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  label {
+    color: white;
+    padding: 0.5rem;
+  }
+  input {
+    padding: 5px;
+    font-size: 1rem;
+    width: 300px;
+  }
+  .name,
+  .phone,
+  .email {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .save {
+    width: 100px;
+    @include btn;
+  }
+  .actions {
+    .back {
+      @include btn;
+    }
+    .spacer {
+      width: 56.66px;
+    }
+  }
+}

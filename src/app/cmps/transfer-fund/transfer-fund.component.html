@@ -1,0 +1,21 @@
+<section class="transfer-fund">
+  <h1>Transfer coins to {{ contact.name }}</h1>
+  <span class="alert">{{
+    user.coins <= 0 ? "No more coins to transfer" : ''
+  }}</span>
+  <form class="transfer-form flex align-center space-between" (submit)="onTransferFund()">
+    <label for="amount">Amount ({{ transferAmount }}):</label>
+    <input
+      [(ngModel)]="transferAmount"
+      title="{{ transferAmount }}"
+      value="{{ transferAmount }}"
+      min="1"
+      step="1"
+      max={{user.coins}}
+      name="amount"
+      id="amount"
+      type="range"
+    />
+    <button>Transfer</button>
+  </form>
+</section>

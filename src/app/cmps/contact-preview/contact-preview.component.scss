@@ -1,0 +1,20 @@
+.contact-preview{
+    border-bottom: 1px solid #c0c0c0;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s;
+    text-decoration: none;
+    &:hover{
+        box-shadow: 0px -1px 10px 2px #c0c0c0;
+    }
+    .name{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    img{
+        width: 70px;
+        margin: 0 1rem ;
+    }
+    
+    
+}

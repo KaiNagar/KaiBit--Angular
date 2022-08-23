@@ -1,0 +1,21 @@
+<section class="contact-details flex column">
+  <!-- <div class=""> -->
+    <div class="actions flex align-center space-between">
+      <a routerLink="/contact">Back</a>
+      <div class="actions-right">
+        <a routerLink="/edit/{{ contact._id }}">Edit</a>
+        <button (click)="onRemove()">Remove</button>
+      </div>
+    </div>
+    <div class="c-details flex align-center">
+      <img src="https://robohash.org/{{ contact.name }}?set=set3" alt="" />
+      <div class="contact-info flex column">
+        <span><span class="name">Name:</span> {{ contact.name }}</span>
+        <span><span class="phone">Phone:</span> {{ contact.phone }}</span>
+        <span><span class="email">Email:</span> {{ contact.email }}</span>
+      </div>
+    </div>
+    <transfer-fund  [contact]="contact"></transfer-fund>
+    <moves-list  [contact]="contact"></moves-list>
+  <!-- </div> -->
+</section>

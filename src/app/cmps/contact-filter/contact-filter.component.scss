@@ -1,0 +1,19 @@
+.contact-filter {
+  input {
+    width: 100%;
+    padding: 4px;
+    padding-inline-start: 1rem;
+    border-radius: 8px;
+    font-size: 18px;
+    border: 0;
+    background-color: rgb(93, 170, 184);
+    color: white;
+    &::placeholder {
+      color: white;
+    }
+    font-weight: 500;
+    &:focus {
+      outline: 1px solid white;
+    }
+  }
+}

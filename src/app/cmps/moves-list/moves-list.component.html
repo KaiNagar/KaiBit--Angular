@@ -1,0 +1,8 @@
+<section   class="moves-list flex column">
+  <h1>Your {{ contact ? "" : "Last 3" }} Moves</h1>
+  <moves-preview
+    *ngFor="let move of movesToDisplay"
+    [move]="move"
+    [user]="user"
+  ></moves-preview>
+</section>
