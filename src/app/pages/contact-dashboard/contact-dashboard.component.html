@@ -1,4 +1,4 @@
-<section class="dashboard-page">
+<section *ngIf="priceMarketData && avgTransactionData" class="dashboard-page">
     
     <h1>{{priceMarketData.title}}</h1>
     <google-chart
