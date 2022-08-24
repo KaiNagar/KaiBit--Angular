@@ -1,6 +1,12 @@
 .app-header {
   background-color: hsl(218, 28%, 13%);
   color: white;
+  .header{
+    padding: 10px;
+    img{
+      width: 80px;
+    }
+  }
   nav{
     a:not(:last-child){
         margin-inline-end: 1rem;

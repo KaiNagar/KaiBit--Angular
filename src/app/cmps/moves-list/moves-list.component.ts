@@ -15,6 +15,7 @@ export class MovesListComponent implements OnInit {
   @Input() contact!: Contact;
   user!: User;
   movesToDisplay!: Move[];
+  isHavingMoves!: boolean;
 
   ngOnInit(): void {
     this.UserService.user$.subscribe((user) => {
@@ -30,6 +31,9 @@ export class MovesListComponent implements OnInit {
       this.movesToDisplay = this.user.moves
         .filter((m) => m.toId === this.contact._id)
         .reverse();
+      if (this.movesToDisplay && this.movesToDisplay.length)
+        this.isHavingMoves = true;
+      else this.isHavingMoves = false;
     } else {
       this.movesToDisplay = this.user.moves.reverse().slice(0, 3);
     }

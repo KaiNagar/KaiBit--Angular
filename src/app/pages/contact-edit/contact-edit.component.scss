@@ -35,7 +35,7 @@
   }
   .tab {
     padding: 0.5rem;
-    width: 400px;
+    width: 350px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,7 +47,7 @@
   input {
     padding: 5px;
     font-size: 1rem;
-    width: 300px;
+    width: 250px;
   }
   .name,
   .phone,
@@ -58,6 +58,7 @@
   .save {
     width: 100px;
     @include btn;
+    margin: auto
   }
   .actions {
     .back {

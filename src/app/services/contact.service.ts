@@ -137,6 +137,8 @@ export class ContactService {
   private _filterBy$ = new BehaviorSubject<ContactFilter>({ term: '' });
   public filterBy$ = this._filterBy$.asObservable();
 
+  public isDark:boolean = true
+
   constructor(private UtilService: UtilService) {}
 
   private setContacts() {

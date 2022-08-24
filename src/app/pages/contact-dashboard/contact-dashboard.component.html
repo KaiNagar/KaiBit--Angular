@@ -1,1 +1,24 @@
-<p>contact-dashboard works!</p>
+<section class="dashboard-page">
+    
+    <h1>{{priceMarketData.title}}</h1>
+    <google-chart
+    class="chart"
+    [data]="priceMarketData.data"
+    [type]="typeLine"
+    [options]="myOptions"
+    [columns]="priceColumns"
+    style="width: 100%;"
+  >
+  </google-chart>
+
+    <h1>{{avgTransactionData.title}}</h1>
+    <google-chart
+    class="chart"
+    [data]="avgTransactionData.data"
+    [type]="typeLine"
+    [options]="myOptions"
+    [columns]="transColumn"
+    style="width: 100%;"
+  >
+  </google-chart>
+</section>

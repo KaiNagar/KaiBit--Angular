@@ -17,6 +17,8 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
 import { MovesListComponent } from './cmps/moves-list/moves-list.component';
 import { MovesPreviewComponent } from './cmps/moves-preview/moves-preview.component';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,13 @@ import { MovesPreviewComponent } from './cmps/moves-preview/moves-preview.compon
     MovesListComponent,
     MovesPreviewComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule,FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    GoogleChartsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

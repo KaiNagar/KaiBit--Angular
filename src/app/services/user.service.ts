@@ -32,7 +32,7 @@ export class UserService {
 
   public logout() {
     localStorage.removeItem(USER_KEY);
-    this._user$.next(this.getUser())
+    this._user$.next(null)
   }
 
   public addMove(contact: Contact, amount: number) {

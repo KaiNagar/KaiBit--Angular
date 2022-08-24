@@ -17,16 +17,19 @@
   color: white;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
+    .img-info {
+      flex-direction: column;
+    }
   }
-  .user-details{
+  .user-details {
     width: 100%;
-    .u-top{
-      margin-block-end:2rem;
+    .u-top {
+      margin-block-end: 2rem;
     }
   }
   .home-welcome {
     margin: auto;
-    .signup-btn{
+    .signup-btn {
       @include btn;
       margin-block-start: 2rem;
       padding: 20px 40px;
@@ -65,9 +68,8 @@
     font-weight: 500;
     font-size: 20px;
   }
-  .logout{
+  .logout {
     @include btn;
     width: 100px;
   }
-
 }

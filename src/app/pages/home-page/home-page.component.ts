@@ -10,18 +10,33 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HomePageComponent implements OnInit {
   constructor(private UserService: UserService, private router: Router) {}
-  user!: User;
+  user!: User | null ;
   ngOnInit(): void {
-    this.UserService.user$.subscribe(user=>{
-      if(user){this.user = user}
-    })
+    this.UserService.user$.subscribe((user) => {
+      if (user) {
+        this.user = user;
+      }
+    });
   }
 
   onGoSignup() {
     this.router.navigateByUrl('/signup');
+    this.UserService.user$.subscribe((user) => {
+      if (user) {
+        this.user = user;
+      }
+    });
   }
 
   onLogout() {
     this.UserService.logout();
+    this.UserService.user$.subscribe((user) => {
+      this.user = user;
+    });
+  }
+
+  isHavingMoves() {
+
+    return this.user?.moves.length
   }
 }

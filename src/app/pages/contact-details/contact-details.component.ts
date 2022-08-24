@@ -29,4 +29,7 @@ export class ContactDetailsComponent implements OnInit {
     this.ContactService.deleteContact(this.contact._id);
     this.router.navigateByUrl('/contact');
   }
+
+
+  
 }

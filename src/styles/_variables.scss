@@ -1,12 +1,15 @@
 // COLOR PALETTE
-$clr-MBG: hsl(218, 28%, 13%);
-$clr-FBG: hsl(216, 53%, 9%);
-$clr-introBG: hsl(217, 28%, 15%);
-$clr-testiBG: hsl(219, 30%, 18%);
-$clr-white: #fff;
-$clr-links: #62e0d9;
-$clr-border: #707070;
-$clr-Lgrey: #c0c0c0;
+:root{
+
+    --clr-MBG: hsl(218, 28%, 13%);
+    --clr-FBG: hsl(216, 53%, 9%);
+    --clr-introBG: hsl(217, 28%, 15%);
+    --clr-testiBG: hsl(219, 30%, 18%);
+    --clr-white: #fff;
+    --clr-links: #62e0d9;
+    --clr-border: #707070;
+    --clr-Lgrey: #c0c0c0;
+}
 
 // LAYOUT
 $layoutPadding: 20px;

@@ -16,22 +16,23 @@
   <ng-template #UserDetails>
     <div class="user-details flex column">
       <div class="u-top flex column">
-        <div class="flex align-center">
+        <div class="img-info flex align-center">
           <img
             class="img"
-            src="https://robohash.org/{{ user.name }}?set=set3"
+            src="https://robohash.org/{{ user?.name }}?set=set3"
             alt=""
           />
           <div class="user-info flex column">
-            <span><span class="name">Name: </span>{{ user.name }}</span>
-            <span><span class="coins">Coins: </span>{{ user.coins }}</span>
+            <span><span class="name">Name: </span>{{ user?.name }}</span>
+            <span><span class="coins">Coins: </span>{{ user?.coins }}</span>
             <span><span class="btc">BTC: </span>btc</span>
           </div>
         </div>
         <button class="logout" (click)="onLogout()">Logout</button>
       </div>
-
-      <moves-list></moves-list>
+      <div *ngIf="isHavingMoves()">
+        <moves-list></moves-list>
+      </div>
     </div>
   </ng-template>
 </section>
